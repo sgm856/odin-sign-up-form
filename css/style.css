@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'u.s._101regular';
+    src: url('us101-webfont.woff2') format('woff2'),
+        url('us101-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    font-family: Helvetica, Arial, sans-serif;
+    --main-bg-color: black;
+}
+
+.logo {
+    font-family: "u.s._101regular", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo-container {
+    display: flex;
+    max-width: calc()
+}
