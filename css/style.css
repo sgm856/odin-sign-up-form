@@ -1,24 +1,32 @@
 @font-face {
     font-family: 'u.s._101regular';
-    src: url('us101-webfont.woff2') format('woff2'),
-        url('us101-webfont.woff') format('woff');
+    src: url("../resources/fonts/us101-webfont.woff2") format('woff2'),
+        url("../resources/fonts/us101-webfont.woff") format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
     font-family: Helvetica, Arial, sans-serif;
     --main-bg-color: black;
     --helper-text: rgb(80, 80, 80);
+    --color-differ: rgb(240, 240, 240);
 }
 
 .logo {
-    font-family: "u.s._101regular", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'u.s._101regular', 'Times New Roman', serif;
 }
 
 .main-container,
 .logo-container,
+.quote-container,
+form,
 body {
     display: flex;
 }
@@ -27,13 +35,18 @@ body {
     flex-direction: column;
 }
 
+.main-container>* {
+    padding: 0 32px;
+}
+
 .logo-container {
     max-width: 25vw;
     overflow: hidden;
 }
 
-form {
-    display: flex;
+.quote-container {
+    background-color: var(--color-differ);
+    font-weight: 800;
 }
 
 form div {
