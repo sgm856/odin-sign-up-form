@@ -15,8 +15,11 @@
 :root {
     font-family: Helvetica, Arial, sans-serif;
     --main-bg-color: black;
-    --helper-text: rgb(80, 80, 80);
-    --color-differ: rgb(240, 240, 240);
+    --helper-text: rgb(58, 58, 58);
+    --background-color-differ: rgb(250, 250, 250);
+    --text-color-mini-quote: rgb(0, 0, 112);
+    --logo-width: 30vw;
+    line-height: 1.5;
 }
 
 .logo {
@@ -27,11 +30,14 @@
 .logo-container,
 .quote-container,
 form,
+.form-row,
 body {
     display: flex;
 }
 
-.main-container {
+.main-container,
+.quote-container,
+form {
     flex-direction: column;
 }
 
@@ -39,20 +45,37 @@ body {
     padding: 0 32px;
 }
 
+.main-container p {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
 .logo-container {
-    max-width: 25vw;
+    max-width: var(--logo-width);
     overflow: hidden;
 }
 
 .quote-container {
     background-color: var(--color-differ);
     font-weight: 800;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    min-width: calc(100vw - var(--logo-width));
 }
 
-form div {
+.quote {
+    max-width: 55ch;
+}
+
+.mini-quote {
+    font-weight: 800;
+    color: var(--text-color-mini-quote);
+}
+
+.form-input {
     display: flex;
     flex-direction: column;
-    max-width: calc(128px + 10vw);
+    max-width: calc(128px + 100vw);
 }
 
 form label {
@@ -63,4 +86,8 @@ form label {
 
 form input {
     border-radius: 0.2rem;
+}
+
+form div.form-row:nth-child(1n + 1) {
+    padding-top: 2rem;
 }
