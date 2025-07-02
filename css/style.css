@@ -10,13 +10,44 @@
 :root {
     font-family: Helvetica, Arial, sans-serif;
     --main-bg-color: black;
+    --helper-text: rgb(80, 80, 80);
 }
 
 .logo {
     font-family: "u.s._101regular", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.logo-container {
+.main-container,
+.logo-container,
+body {
     display: flex;
-    max-width: calc()
+}
+
+.main-container {
+    flex-direction: column;
+}
+
+.logo-container {
+    max-width: 25vw;
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(128px + 10vw);
+}
+
+form label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--helper-text);
+}
+
+form input {
+    border-radius: 0.2rem;
 }
