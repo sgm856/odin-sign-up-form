@@ -232,3 +232,8 @@ button:hover {
     background-color: var(--retro-purple-dark);
     cursor: pointer;
 }
+
+input:focus {
+    box-shadow: 2px 0.8vh 5px rgb(207, 207, 207);
+    border-color: var(--retro-purple-dark);
+}
