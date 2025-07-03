@@ -10,10 +10,15 @@
 </head>
 
 <body>
-    <div class="logo-container">
-        <img class="logo-background" src="./resources/pics/mountain-landscape-Desiree-Marie.jpg"
-            alt="mountain background">
-        <span class="logo-background-credit">Photo by Desiree Marie</span>
+    <div class="side-hero">
+        <img class="side-hero-background" src="./resources/pics/lorenzo-herrera-unsplash.jpg" alt="mountain background">
+        <div class="logo">ODIN</div>
+
+        <span class="side-hero-background-credit">Photo by <a
+                href="https://unsplash.com/@lorenzoherrera?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lorenzo
+                Herrera</a> on <a
+                href="https://unsplash.com/photos/vintage-gray-game-console-and-joystick-p0j-mE6mGo4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </span>
     </div>
     <div class="main-container">
         <div class="quote-container">
@@ -25,7 +30,7 @@
             <p class="quote">You <i>know</i> you want to.</p>
         </div>
         <p class="mini-quote">Let's do this!</p>
-        <form action="." method="post">
+        <form id="info-form" action="." method="post">
             <div class="form-row">
                 <div class="form-input">
                     <label for="first-name">FIRST NAME</label>
@@ -38,7 +43,7 @@
             </div>
             <div class="form-row">
                 <div class="form-input">
-                    <label for="email">EMAIL</label>
+                    <label for="email">EMAIL*</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-input">
@@ -48,11 +53,11 @@
             </div>
             <div class="form-row">
                 <div class="form-input">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="password">PASSWORD*</label>
+                    <input type="password" id="password" name="password" minlength=12 maxlength=72 required>
                 </div>
                 <div class="form-input">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <label for="confirm-password">CONFIRM PASSWORD*</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
             </div>
@@ -60,7 +65,7 @@
 
         <div class="main-bottom-container">
             <div class="submit-button-container">
-                <button type="submit">Create Account</button>
+                <button type="submit" for="info-form">Create Account</button>
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>

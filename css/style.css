@@ -6,7 +6,9 @@
     font-style: normal;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,10 +18,11 @@
     font-family: Helvetica, Arial, sans-serif;
     --main-bg-color: black;
     --helper-text: rgb(46, 46, 46);
-    --background-color-differ: rgb(245, 245, 245);
+    --background-color-differ: rgb(252, 252, 252);
     --text-color-mini-quote: rgb(4, 4, 66);
     --logo-width: 33vw;
-    --sky: rgb(2, 69, 222);
+    --sky: rgb(123, 2, 222);
+    --transparent-black: rgb(0, 0, 0, 80%);
     line-height: 1.5;
 }
 
@@ -37,6 +40,18 @@ textarea {
     margin: 0;
     box-sizing: border-box;
     font-size: 100%;
+}
+
+i {
+    color: rgb(214, 0, 214);
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: blueviolet;
 }
 
 .logo {
@@ -78,13 +93,37 @@ form {
     padding-bottom: 0.7em;
 }
 
-.logo-container {
+.side-hero {
     max-width: var(--logo-width);
     overflow: hidden;
+    position: relative;
 }
 
-.logo-container img {
+.side-hero img {
     object-fit: cover;
+    height: 100vh;
+}
+
+.side-hero .logo {
+    display: flex;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: calc(30% - 10vh);
+    width: 100%;
+    background-color: var(--transparent-black);
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.side-hero-background-credit {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    color: white;
+    background-color: var(--transparent-black);
+    text-align: center;
 }
 
 .quote-container {
@@ -93,6 +132,8 @@ form {
     padding-top: 8vh;
     min-width: calc(100vw - var(--logo-width));
     padding-bottom: 4vh;
+    min-height: 30%;
+    max-height: 30%;
 }
 
 .quote {
@@ -146,9 +187,14 @@ button {
     color: white;
     padding: 0.5em;
     width: calc(64px + 7vw + 2em);
+    border: none;
 }
 
 input,
 button {
     border-radius: 0.3rem;
+}
+
+input:invalid {
+    border-color: red;
 }
