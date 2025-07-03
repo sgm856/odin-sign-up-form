@@ -53,10 +53,6 @@ i {
     color: rgb(214, 0, 214);
 }
 
-.logo {
-    font-family: 'u.s._101regular', 'Times New Roman', serif;
-}
-
 /*
 Links
 */
@@ -97,13 +93,14 @@ Side hero stuff
     overflow: hidden;
     position: relative;
     max-height: 100vh;
+    font-family: 'u.s._101regular';
 }
 
 .side-hero img {
     object-fit: cover;
 }
 
-.side-hero .logo {
+.side-hero .logo-container {
     display: flex;
     font-size: 4rem;
     color: white;
@@ -114,6 +111,7 @@ Side hero stuff
     justify-content: center;
     align-items: center;
     min-height: 10vh;
+    height: 12vh;
 }
 
 .side-hero-background-credit {
@@ -123,6 +121,10 @@ Side hero stuff
     color: white;
     background-color: var(--transparent-black);
     text-align: center;
+}
+
+.logo-container img {
+    max-height: 100%;
 }
 
 /*
