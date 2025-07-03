@@ -18,16 +18,19 @@
     font-family: Helvetica, Arial, sans-serif;
     --main-bg-color: black;
     --helper-text: rgb(46, 46, 46);
-    --background-color-differ: rgb(252, 252, 252);
-    --text-color-mini-quote: rgb(4, 4, 66);
+    --background-color-differ: rgb(247, 247, 247);
+    --text-color-mini-message: rgb(4, 4, 66);
     --logo-width: 33vw;
-    --sky: rgb(123, 2, 222);
-    --transparent-black: rgb(0, 0, 0, 80%);
+    --retro-purple: rgb(123, 2, 222);
+    --retro-purple-dark: rgb(117, 2, 211);
+    --transparent-black: rgba(0, 0, 0, 80%);
     line-height: 1.5;
 }
 
 body {
     font-size: 1.4rem;
+    display: flex;
+    min-height: 100vh;
 }
 
 button,
@@ -42,9 +45,21 @@ textarea {
     font-size: 100%;
 }
 
+/*
+Typography
+*/
+
 i {
     color: rgb(214, 0, 214);
 }
+
+.logo {
+    font-family: 'u.s._101regular', 'Times New Roman', serif;
+}
+
+/*
+Links
+*/
 
 a:link {
     color: white;
@@ -54,34 +69,14 @@ a:visited {
     color: blueviolet;
 }
 
-.logo {
-    font-family: 'u.s._101regular', 'Times New Roman', serif;
-}
+/*
+main-container stuff
+*/
 
-.main-container,
-.logo-container,
-.quote-container,
-.main-bottom-container,
-.form-row,
-form,
-body {
+.main-container {
     display: flex;
-}
-
-body {
-    min-height: 100vh;
-}
-
-form {
-    box-shadow: 0px 0.8vh 5px rgb(228, 228, 228);
-    position: relative;
-    min-height: 30vh;
-}
-
-.main-container,
-.quote-container,
-form {
     flex-direction: column;
+    flex: 2 1 0;
 }
 
 .main-container>* {
@@ -93,15 +88,19 @@ form {
     padding-bottom: 0.7em;
 }
 
+/*
+Side hero stuff
+*/
+
 .side-hero {
-    max-width: var(--logo-width);
+    display: flex;
     overflow: hidden;
     position: relative;
+    max-height: 100vh;
 }
 
 .side-hero img {
     object-fit: cover;
-    height: 100vh;
 }
 
 .side-hero .logo {
@@ -126,28 +125,61 @@ form {
     text-align: center;
 }
 
-.quote-container {
+/*
+Quote section
+*/
+
+.message-container {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color-differ);
     font-weight: 800;
     padding-top: 8vh;
     min-width: calc(100vw - var(--logo-width));
-    padding-bottom: 4vh;
-    min-height: 30%;
-    max-height: 30%;
+    padding-bottom: 2vh;
 }
 
-.quote {
+.message {
     max-width: 55ch;
 }
 
-.mini-quote {
+p.mini-message {
     font-weight: 800;
-    color: var(--text-color-mini-quote);
+    color: var(--text-color-mini-message);
 }
 
-.quote,
-.mini-quote {
+.message,
+.mini-message {
     font-size: 1.1em;
+}
+
+/*
+bottom submit section
+*/
+
+.bottom-submit-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    padding-top: 2rem;
+    background-color: var(--background-color-differ);
+}
+
+/*
+form styling
+*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0.8vh 5px rgb(207, 207, 207);
+    position: relative;
+    min-height: 30vh;
+}
+
+.form-row {
+    display: flex;
+    gap: 2em;
 }
 
 .form-input {
@@ -162,12 +194,8 @@ form label {
     letter-spacing: 1px;
 }
 
-form div.form-row:nth-child(1n + 2) {
+.form-row:nth-child(n + 2) {
     padding-top: 1.5rem;
-}
-
-.form-row {
-    gap: 2em;
 }
 
 .main-container form {
@@ -175,26 +203,32 @@ form div.form-row:nth-child(1n + 2) {
     padding-bottom: 2em;
 }
 
-.main-bottom-container {
-    flex-direction: column;
-    flex: 1 1 0;
-    padding-top: 2rem;
-    background-color: var(--background-color-differ);
+input {
+    border-radius: 0.3rem;
 }
 
+/*
+button styling
+*/
+
 button {
-    background-color: var(--sky);
+    background-color: var(--retro-purple);
     color: white;
     padding: 0.5em;
     width: calc(64px + 7vw + 2em);
     border: none;
-}
-
-input,
-button {
     border-radius: 0.3rem;
 }
 
+/*
+extras
+*/
+
 input:invalid {
     border-color: red;
+}
+
+button:hover {
+    background-color: var(--retro-purple-dark);
+    cursor: pointer;
 }

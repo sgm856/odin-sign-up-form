@@ -11,7 +11,8 @@
 
 <body>
     <div class="side-hero">
-        <img class="side-hero-background" src="./resources/pics/lorenzo-herrera-unsplash.jpg" alt="mountain background">
+        <img class="side-hero-background" src="./resources/images/lorenzo-herrera-unsplash.jpg"
+            alt="mountain background">
         <div class="logo">ODIN</div>
 
         <span class="side-hero-background-credit">Photo by <a
@@ -21,15 +22,15 @@
         </span>
     </div>
     <div class="main-container">
-        <div class="quote-container">
-            <p class="quote">This is not a real online service! You know you need something like this in your life to
+        <div class="message-container">
+            <p class="message">This is not a real online service! You know you need something like this in your life to
                 help you realize
                 your deepest dreams.
                 Sign up now to get started.
             </p>
-            <p class="quote">You <i>know</i> you want to.</p>
+            <p class="message">You <i>know</i> you want to.</p>
         </div>
-        <p class="mini-quote">Let's do this!</p>
+        <p class="mini-message">Let's do this!</p>
         <form id="info-form" action="." method="post">
             <div class="form-row">
                 <div class="form-input">
@@ -54,7 +55,8 @@
             <div class="form-row">
                 <div class="form-input">
                     <label for="password">PASSWORD*</label>
-                    <input type="password" id="password" name="password" minlength=12 maxlength=72 required>
+                    <input type="password" id="password" name="password" minlength=12 maxlength=72
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                 </div>
                 <div class="form-input">
                     <label for="confirm-password">CONFIRM PASSWORD*</label>
@@ -63,7 +65,7 @@
             </div>
         </form>
 
-        <div class="main-bottom-container">
+        <div class="bottom-submit-container">
             <div class="submit-button-container">
                 <button type="submit" for="info-form">Create Account</button>
                 <p>Already have an account? <a href="">Log in</a></p>
